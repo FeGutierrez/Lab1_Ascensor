@@ -22,16 +22,20 @@ public class RobotBase
         
         public static void regresarAlOrigen(Ascensor robot){
             
-            if (robot.getDirection()==Direction.EAST) {
-                robot.turnLeft();
-                robot.turnLeft();
-            }
-            if (robot.getDirection()==Direction.NORTH) {
-                robot.turnLeft();
-            }
-            if (robot.getDirection()==Direction.SOUTH) {
-                turnRight(robot);
-            }
+//            if (robot.getDirection()==Direction.EAST) {
+//                robot.turnLeft();
+//                robot.turnLeft();
+//            }
+//            if (robot.getDirection()==Direction.NORTH) {
+//                robot.turnLeft();
+//            }
+//            if (robot.getDirection()==Direction.SOUTH) {
+//                turnRight(robot);
+//            }
+while (robot.getDirection()!=Direction.WEST){
+    robot.turnLeft();
+}
+
             while (robot.getAvenue()!= robot.getAvenidaOrigen() ) {                
                 robot.move();
             }
@@ -75,7 +79,7 @@ public class RobotBase
             ascensor1 = new Ascensor(objetos, yRelativa,xRelativa,  Direction.EAST,0);
             ascensor2 = new Ascensor(objetos, yRelativa,xRelativa+1, Direction.EAST,0);
             
-            Usuario u1 = new Usuario (objetos, yRelativa, xRelativa+2,5);
+            Usuario u1 = new Usuario (objetos, yRelativa, xRelativa+5,6);
             
             ascensor1.move();
             
