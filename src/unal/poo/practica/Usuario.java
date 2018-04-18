@@ -11,10 +11,12 @@ import becker.robots.*;
  */
 public class Usuario extends Thing {
     
+    private int id;
     private int pisoDeseado;
 
     public Usuario(City city, int i, int i1, int pisoDeseado) {
         super(city, i, i1);
+        this.id = id;
         this.pisoDeseado = pisoDeseado;
     }
 
@@ -25,6 +27,12 @@ public class Usuario extends Thing {
     public void setPisoDeseado(int pisoDeseado) {
         this.pisoDeseado = pisoDeseado;
     }
+
+    public int getId() {
+        return id;
+    }
+    
+    
     
     
     
